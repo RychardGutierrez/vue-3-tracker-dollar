@@ -1,6 +1,6 @@
 <template>
   <Suspense>
-    <CountryView />
+    <TrackerView />
     <template #fallback>
       <p>Loading ...</p>
     </template>
@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-import CountryView from '../components/country/CountryView.vue';
+import TrackerView from '../components/country/TrackerView.vue';
 </script>

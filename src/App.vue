@@ -6,6 +6,7 @@ import NavigationBar from './components/NavigationBar.vue';
 <template>
   <div class="flex flex-col min-h-screen font-Roboto bg-slate-200">
     <NavigationBar />
+    <!-- Configuration router custom -->
     <RouterView v-slot="{ Component, route }">
       <Transition name="page" mode="out-in">
         <div :key="route.name">
@@ -16,4 +17,6 @@ import NavigationBar from './components/NavigationBar.vue';
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

@@ -1,8 +1,6 @@
 <template>
   <header class="sticky top-0 bg-white shadow-sm">
-    <nav
-      class="container flex flex-col sm:flex-row items-center gap-4 text-black py-6 px-0"
-    >
+    <nav class="container flex flex-col sm:flex-row items-center gap-4 text-black py-6 px-0">
       <RouterLink :to="routerHome">
         <div class="flex items-center gap-3">
           <img :src="iconDollar" alt="dollar" class="w-11" />
@@ -10,20 +8,11 @@
         </div>
       </RouterLink>
       <div class="flex gap-5 flex-1 justify-end">
-        <img
-          v-if="route.query.preview"
-          :src="iconSave"
-          alt="Save Country"
-          class="w-9 hover:shadow-xl duration-150 cursor-pointer"
-          @click="handleSaved"
-        />
+        <img v-if="route.query.preview" :src="iconSave" alt="Save Country"
+          class="w-9 hover:shadow-xl duration-150 cursor-pointer" @click="handleSaved" />
 
-        <img
-          @click="toogleModal"
-          :src="iconHelp"
-          alt="Help"
-          class="w-9 hover:shadow-xl rounded-full duration-150 cursor-pointer"
-        />
+        <img @click="toogleModal" :src="iconHelp" alt="Help"
+          class="w-9 hover:shadow-xl rounded-full duration-150 cursor-pointer" />
       </div>
     </nav>
   </header>
@@ -52,11 +41,13 @@ const trackerStore = useTrackerStore();
 
 const routerHome = { name: 'home' };
 
+// Emit - call from BaseModal
 const toogleModal = () => {
   modalActive.value = !modalActive.value;
 };
 
 const handleSaved = () => {
+  // Route - update query and params
   const trackerObjec = {
     country: route.params.country,
     official: route.query.official,
@@ -73,4 +64,6 @@ const handleSaved = () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

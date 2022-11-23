@@ -35,6 +35,7 @@ import { defineProps } from 'vue';
 
 import BaseModal from './ui/BaseModal.vue';
 
+// Props - use props 
 const props = defineProps({
   modalActive: {
     typeof: Boolean,
@@ -47,4 +48,6 @@ const toogleModal = () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

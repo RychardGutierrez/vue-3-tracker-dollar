@@ -8,8 +8,8 @@
         </div>
       </RouterLink>
       <div class="flex gap-5 flex-1 justify-end">
-        <img v-if="route.query.preview" :src="iconSave" alt="Save Country"
-          class="w-9 hover:shadow-xl duration-150 cursor-pointer" @click="handleSaved" />
+        <img v-if="isPreview" :src="iconSave" alt="Save Country" class="w-9 hover:shadow-xl duration-150 cursor-pointer"
+          @click="saveLocalStore" />
 
         <img @click="toogleModal" :src="iconHelp" alt="Help"
           class="w-9 hover:shadow-xl rounded-full duration-150 cursor-pointer" />
@@ -20,50 +20,16 @@
 </template>
 
 <script setup>
-import { RouterLink, useRoute, useRouter } from 'vue-router';
-import { ref } from 'vue';
-
-import { useTrackerStore } from '@/store';
-import { updatedStore } from '@/data/store';
-import { currentDate } from '@/helper/dateTime';
+import { RouterLink } from 'vue-router';
 
 import iconDollar from '@/assets/dollar.svg';
 import iconHelp from '@/assets/help.svg';
 import iconSave from '@/assets/save.svg';
 import HelpModal from '@/components/HelpModal.vue';
-
-const route = useRoute();
-const router = useRouter();
-const modalActive = ref(false);
-const savedCities = ref([]);
-
-const trackerStore = useTrackerStore();
+import useNavigationBar from '@/composables/useNavigationBar';
 
 const routerHome = { name: 'home' };
 
-// Emit - call from BaseModal
-const toogleModal = () => {
-  modalActive.value = !modalActive.value;
-};
+const { saveLocalStore, toogleModal, isPreview, modalActive } = useNavigationBar();
 
-const handleSaved = () => {
-  // Route - update query and params
-  const trackerObjec = {
-    country: route.params.country,
-    official: route.query.official,
-    symbol: route.query.symbols,
-    savedDate: currentDate(),
-    rate: trackerStore.state.value,
-  };
-  const { id } = updatedStore(trackerObjec);
-
-  let query = Object.assign({}, route.query);
-  delete query.preview;
-  query.id = id;
-  router.replace({ query });
-};
 </script>
-
-<style lang="scss" scoped>
-
-</style>

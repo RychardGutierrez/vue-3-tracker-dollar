@@ -2,7 +2,7 @@
   <main class="container text-black">
     <div class="pt-16 mb-8 relative">
       <!-- search country -->
-      <input v-model="searchQuery" @input="getSearchResults" type="text" placeholder="Search for country"
+      <input v-model="searchQuery" @input="getResults" type="text" placeholder="Search for country"
         class="py-2 px-1 w-full bg-transparent border-b border-y-slate-400 focus:border-dollar-primary focus:outline-none focus:shadow-[0px_1px_0_0_#004E71]" />
 
       <!-- search results  -->
@@ -16,8 +16,7 @@
           Sorry, something went wrong, please try again
         </p>
         <template v-else>
-          <li v-for="searchResult in countrySearchResults" :key="searchResult.ccn3"
-            @click="goToPreviewCountry(searchResult)"
+          <li v-for="searchResult in countrySearchResults" :key="searchResult.ccn3" @click="goToCountry(searchResult)"
             class="py-2 px-2 border-b border-y-slate-100 hover:bg-dollar-third cursor-pointer">
             {{ searchResult.name.official }}
           </li>
@@ -37,53 +36,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-import { getSeachContries } from '../api/countryApi';
-import CountryList from '../components/country/CountryList.vue';
+import CountryList from '@/components/country/CountryList.vue';
+import useSearchCountry from '@/composables/useSearchCountry';
+import useRouteCountry from '@/composables/useRouteCountry';
 
-const router = useRouter();
-const searchQuery = ref('');
-const queryTimeout = ref(null);
-const countrySearchResults = ref(null);
-const searchError = ref({ error: false, message: '' });
+const { getResults, searchQuery, searchError, countrySearchResults, } = useSearchCountry();
 
-const getSearchResults = () => {
-  clearTimeout(queryTimeout.value);
+const { goToCountry } = useRouteCountry();
 
-  queryTimeout.value = setTimeout(async () => {
-    if (searchQuery.value === '') {
-      return (countrySearchResults.value = null);
-    }
-
-    const result = await getSeachContries(searchQuery.value);
-
-    if (result.error) {
-      searchError.value.error = true;
-      searchError.value.message = result.message;
-      countrySearchResults.value = [];
-      return;
-    }
-
-    searchError.value.error = false;
-    searchError.value.message = '';
-    countrySearchResults.value = result;
-  }, 300);
-};
-
-const goToPreviewCountry = (searchResult) => {
-  const country = searchResult.name.common.toLowerCase().replaceAll(' ', '');
-  // Route - go to contry view 
-  router.push({
-    name: 'countryView',
-    params: {
-      country,
-    },
-    query: {
-      official: searchResult.name.official,
-      symbols: Object.keys(searchResult.currencies)[0],
-      preview: true,
-    },
-  });
-};
 </script>

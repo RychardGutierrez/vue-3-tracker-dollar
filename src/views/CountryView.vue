@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-import TrackerView from '../components/country/TrackerView.vue';
+import TrackerView from './TrackerView.vue';
 </script>

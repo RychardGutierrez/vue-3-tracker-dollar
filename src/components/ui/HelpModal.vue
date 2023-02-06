@@ -33,7 +33,7 @@
 <script setup>
 import { defineProps } from 'vue';
 
-import BaseModal from './ui/BaseModal.vue';
+import BaseModal from './BaseModal.vue';
 
 // Props - use props 
 const props = defineProps({

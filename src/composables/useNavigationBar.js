@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router';
 import { updatedStore } from '@/data/store';
 import { currentDate } from '@/helper/dateTime';
 import { useTrackerStore } from '@/store';
+import { storeToRefs } from 'pinia';
 
 export default function useNavigationBar() {
   const route = useRoute();
@@ -11,6 +12,7 @@ export default function useNavigationBar() {
   const modalActive = ref(false);
   const trackerStore = useTrackerStore();
 
+  const { getRate } = storeToRefs(trackerStore);
   const saveLocalStore = () => {
     // Route - update query and params
     const trackerObjec = {
@@ -18,7 +20,7 @@ export default function useNavigationBar() {
       official: route.query.official,
       symbol: route.query.symbols,
       savedDate: currentDate(),
-      rate: trackerStore.state.value,
+      rate: getRate,
     };
 
     const { id } = updatedStore(trackerObjec);
@@ -40,6 +42,6 @@ export default function useNavigationBar() {
     saveLocalStore,
     toogleModal,
     isPreview,
-    modalActive
+    modalActive,
   };
 }

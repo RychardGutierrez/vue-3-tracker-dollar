@@ -60,7 +60,7 @@ export default function useTrakerDollar() {
   const trackerStore = useTrackerStore();
   watchEffect(() => {
     if (converterDollar.value) {
-      trackerStore.state.value = converterDollar.value.result;
+      trackerStore.setRate(converterDollar.value.result);
     }
   });
 
@@ -72,7 +72,7 @@ export default function useTrakerDollar() {
     }
 
     // store reset manual
-    trackerStore.state.value = {};
+    trackerStore.$reset();
 
     // go to home from router
     router.push({
@@ -89,6 +89,6 @@ export default function useTrakerDollar() {
     simbolMoney,
     removeTracker,
     getTrakers,
-    listTrakers
+    listTrakers,
   };
 }

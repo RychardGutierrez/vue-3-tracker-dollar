@@ -26,6 +26,7 @@ export default function useSearchCountry() {
 
       searchError.value.error = false;
       searchError.value.message = '';
+
       countrySearchResults.value = result;
     }, 300);
   };

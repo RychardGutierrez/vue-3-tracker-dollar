@@ -1,10 +1,10 @@
 import { computed, ref, watchEffect } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
-import { useTrackerStore } from '@/store';
-import { getTrackerWeek } from '@/helper/dateTime';
-import { getConvertDollar, getTrackerDollar } from '@/api/exchangeApi';
-import { removedStore, readStore } from '@/data/store';
+import { useTrackerStore } from '../store';
+import { getTrackerWeek } from '../helper/dateTime';
+import { getConvertDollar, getTrackerDollar } from '../api/exchangeApi';
+import { removedStore, readStore } from '../data/store';
 
 export default function useTrakerDollar() {
   const route = useRoute();
@@ -27,7 +27,6 @@ export default function useTrakerDollar() {
     if (result.error) {
       countryError.value.error = true;
       countryError.value.message = result.message;
-      countrySearchResults.value = [];
       return;
     }
 
@@ -45,7 +44,6 @@ export default function useTrakerDollar() {
     if (resultTraker.error) {
       countryError.value.error = true;
       countryError.value.message = resultTraker.message;
-      countrySearchResults.value = [];
       return;
     }
 
@@ -90,5 +88,6 @@ export default function useTrakerDollar() {
     removeTracker,
     getTrakers,
     listTrakers,
+    countryError,
   };
 }

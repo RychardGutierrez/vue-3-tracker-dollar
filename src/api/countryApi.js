@@ -20,7 +20,7 @@ export const getSeachContries = async (seachCountry) => {
   };
 };
 
-export const getFlagContries = async (seachCountry) => {
+export const getFlagCountries = async (seachCountry) => {
   const result = await fetch(`${PATH}${seachCountry}?fields=flags`);
 
   if (result.status === 200) {

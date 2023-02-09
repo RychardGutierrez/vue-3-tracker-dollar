@@ -1,10 +1,10 @@
 import { computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-
-import { updatedStore } from '@/data/store';
-import { currentDate } from '@/helper/dateTime';
-import { useTrackerStore } from '@/store';
 import { storeToRefs } from 'pinia';
+
+import { updatedStore } from '../data/store';
+import { currentDate } from '../helper/dateTime';
+import { useTrackerStore } from '../store';
 
 export default function useNavigationBar() {
   const route = useRoute();

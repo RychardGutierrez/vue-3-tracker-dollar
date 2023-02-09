@@ -64,3 +64,66 @@ export const TRACKER_DOLLAR = {
     },
   },
 };
+
+export const COUNTRY_DATA = [
+  {
+    flags: {
+      png: 'https://flagcdn.com/w320/bo.png',
+      svg: 'https://flagcdn.com/bo.svg',
+      alt: 'The flag of Bolivia is composed of three equal horizontal bands of red, yellow and green, with the national coat of arms centered in the yellow band.',
+    },
+    altSpellings: [
+      'BO',
+      'Buliwya',
+      'Wuliwya',
+      'Bolivia, Plurinational State of',
+      'Plurinational State of Bolivia',
+      'Estado Plurinacional de Bolivia',
+      'Buliwya Mamallaqta',
+      'Wuliwya Suyu',
+      'Tetã Volívia',
+    ],
+  },
+];
+
+export const LIST_RESULT_SEARCH = {
+  name: {
+    common: 'Bolivia',
+    official: 'Plurinational State of Bolivia',
+    nativeName: {
+      aym: {
+        official: 'Wuliwya Suyu',
+        common: 'Wuliwya',
+      },
+      grn: {
+        official: 'Tetã Volívia',
+        common: 'Volívia',
+      },
+      que: {
+        official: 'Buliwya Mamallaqta',
+        common: 'Buliwya',
+      },
+      spa: {
+        official: 'Estado Plurinacional de Bolivia',
+        common: 'Bolivia',
+      },
+    },
+  },
+  currencies: {
+    BOB: {
+      name: 'Bolivian boliviano',
+      symbol: 'Bs.',
+    },
+  },
+  altSpellings: [
+    'BO',
+    'Buliwya',
+    'Wuliwya',
+    'Bolivia, Plurinational State of',
+    'Plurinational State of Bolivia',
+    'Estado Plurinacional de Bolivia',
+    'Buliwya Mamallaqta',
+    'Wuliwya Suyu',
+    'Tetã Volívia',
+  ],
+};

@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import { getSeachContries } from '@/api/countryApi';
+import { getSeachContries } from '../api/countryApi';
 
 export default function useSearchCountry() {
   const queryTimeout = ref(null);
@@ -16,7 +16,6 @@ export default function useSearchCountry() {
       }
 
       const result = await getSeachContries(searchQuery.value);
-
       if (result.error) {
         searchError.value.error = true;
         searchError.value.message = result.message;

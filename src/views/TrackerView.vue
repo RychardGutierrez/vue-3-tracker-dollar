@@ -5,7 +5,7 @@
     </BaseBanner>
 
     <!-- Overview -->
-    <TitleTracker :official="official" :flagContry="flagContry" :nameDefaultFlag="nameDefaultFlag"
+    <TitleTracker :official="official" :flagContry="flagCountry" :nameDefaultFlag="nameDefaultFlag"
       :trackerDate="trackerDate" :trackerTime="trackerTime" />
 
     <CurrentStatusDollat :converterDollar="converterDollar" :simbolMoney="simbolMoney" />
@@ -40,7 +40,7 @@ const trackerTime = ref(getTrackerTime());
 const textModal =
   'You are currently previewing the dollar tracker for this country, click on the save icon to start tracking this country is dollar.';
 
-const { getFlagContry, nameDefaultFlag, isPreview, flagContry } = useCountry()
+const { getFlagCountry, nameDefaultFlag, isPreview, flagCountry } = useCountry()
 const {
   getAsyncConvertDollar,
   getAsyncTrackerDollar,
@@ -53,7 +53,7 @@ const {
 
 getAsyncConvertDollar();
 getAsyncTrackerDollar();
-getFlagContry();
+getFlagCountry();
 
 </script>
 

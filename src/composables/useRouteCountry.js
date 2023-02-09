@@ -33,9 +33,8 @@ export default function useRouteCountry() {
     });
   };
 
-
   return {
     goToCountry,
-    goToCountryByTracker
+    goToCountryByTracker,
   };
 }

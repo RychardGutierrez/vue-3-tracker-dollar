@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelpModal component should to match with snapshot - mount 1`] = `
+"<transition-stub name=\\"modal-outer\\" appear=\\"false\\" persisted=\\"false\\" css=\\"true\\" style=\\"display: none;\\">
+  <div class=\\"absolute w-full bg-black bg-opacity-40 h-screen top-0 left-0 flex justify-center px-8\\">
+    <transition-stub name=\\"modal-inner\\" appear=\\"false\\" persisted=\\"false\\" css=\\"true\\">
+      <div class=\\"p-4 bg-white self-start mt-32 max-w-screen-md z-10\\">
+        <div class=\\"text-black\\">
+          <h1 class=\\"text-2xl mb-1\\">About:</h1>
+          <p class=\\"mb-4\\"> Dollar Tracking allows you to follow current status of the dollar in countries. </p>
+          <h2 class=\\"text-2xl\\">How it works:</h2>
+          <ol class=\\"list-decimal list-inside mb-4\\">
+            <li>Search for your city by entering the name in the search bar.</li>
+            <li> Select a country within the results, this will take you to the current Dolar of your selection. </li>
+            <li> Save the country by clicking on the \\"Save\\" icon on the top right. This will save the country for later viewing on the home page. </li>
+          </ol>
+          <h2 class=\\"text-2xl\\">Remove a country</h2>
+          <p> If you no longer wish to follow a country, simply select it on the country page. At the bottom of the page, there will be an option to delete. </p>
+        </div><button class=\\"text-white mt-8 bg-dollar-secondary py-2 px-6\\">Close</button>
+      </div>
+    </transition-stub>
+  </div>
+</transition-stub>"
+`;
+
+exports[`HelpModal component should to match with snapshot - shallowMount 1`] = `"<base-modal-stub textbuttonclose=\\"Close\\" style=\\"display: none;\\"></base-modal-stub>"`;

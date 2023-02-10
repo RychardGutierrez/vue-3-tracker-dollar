@@ -20,9 +20,9 @@ export default function useNavigationBar() {
       official: route.query.official,
       symbol: route.query.symbols,
       savedDate: currentDate(),
-      rate: getRate,
+      rate: getRate.value,
     };
-
+    console.log(trackerObjec);
     const { id } = updatedStore(trackerObjec);
 
     let query = Object.assign({}, route.query);

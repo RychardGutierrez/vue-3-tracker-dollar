@@ -22,11 +22,11 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 
-import iconDollar from '@/assets/dollar.svg';
-import iconHelp from '@/assets/help.svg';
-import iconSave from '@/assets/save.svg';
-import HelpModal from '@/components/ui/HelpModal.vue';
-import useNavigationBar from '@/composables/useNavigationBar';
+import iconDollar from '../../assets/dollar.svg';
+import iconHelp from '../../assets/help.svg';
+import iconSave from '../../assets/save.svg';
+import HelpModal from '../../components/ui/HelpModal.vue';
+import useNavigationBar from '../../composables/useNavigationBar';
 
 const routerHome = { name: 'home' };
 

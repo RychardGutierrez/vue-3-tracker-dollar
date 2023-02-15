@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrentStatusDollar component should to match with snapshot 1`] = `
+"<div class=\\"flex max-w-xl w-full py-4 px-12 bg-dollar-primary text-white justify-center rounded-md shadow-md mb-12\\">
+  <h1 class=\\"text-4xl m-4\\"> 1 USD = 6.98 BO</h1>
+</div>"
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationBar component should to match with snapshot 1`] = `
+"<header class=\\"sticky top-0 bg-white shadow-sm\\">
+  <nav class=\\"container flex flex-col sm:flex-row items-center gap-4 text-black py-6 px-0\\">
+    <router-link-stub to=\\"[object Object]\\" replace=\\"false\\" custom=\\"false\\" ariacurrentvalue=\\"page\\"></router-link-stub>
+    <div class=\\"flex gap-5 flex-1 justify-end\\">
+      <!--v-if--><img src=\\"help-icon\\" alt=\\"Help\\" class=\\"w-9 hover:shadow-xl rounded-full duration-150 cursor-pointer\\">
+    </div>
+  </nav>
+</header>
+<help-modal-stub modalactive=\\"false\\"></help-modal-stub>"
+`;

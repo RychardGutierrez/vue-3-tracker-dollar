@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListResult component should to match with snapshot 1`] = `
+"<!-- search results  -->
+<ul class=\\"absolute bg-dollar-secondary text-white w-full shadow-md py2 px1 top-[120px]\\">
+  <p class=\\"py-2 px-2\\"></p><!-- message error-->
+  <li class=\\"py-2 px-2 border-b border-y-slate-100 hover:bg-dollar-third cursor-pointer\\">Bolivarian Republic of Venezuela</li>
+  <li class=\\"py-2 px-2 border-b border-y-slate-100 hover:bg-dollar-third cursor-pointer\\">Plurinational State of Bolivia</li>
+</ul>"
+`;

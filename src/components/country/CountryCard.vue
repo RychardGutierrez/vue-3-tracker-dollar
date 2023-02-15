@@ -21,7 +21,7 @@ import { defineProps } from 'vue';
 defineProps({
   country: {
     type: Object,
-    default: () => ({}),
+    default: null,
   },
 });
 </script>

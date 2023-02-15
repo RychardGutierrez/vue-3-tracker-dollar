@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleTracker component should to match with snapshot 1`] = `
+"<div class=\\"flex flex-col items-center text-dollar-blue py-12\\">
+  <div class=\\"flex gap-7\\">
+    <h1 class=\\"text-5xl mb-2\\">Plurinational State of Bolivia</h1><img src=\\"https://flagcdn.com/bo.svg\\" alt=\\"bolivia - Flag Icon\\" class=\\"w-24\\">
+  </div>
+  <p class=\\"text-base mb-2\\">Sat, February 11 - 8:20 PM</p>
+</div>"
+`;

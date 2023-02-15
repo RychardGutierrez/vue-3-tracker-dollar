@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import iconDelete from '@/assets/delete.svg';
+import iconDelete from '../../assets/delete.svg';
 
 defineProps({
   removeTracker: {

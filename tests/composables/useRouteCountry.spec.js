@@ -45,19 +45,21 @@ describe('useRouteCountry composable', () => {
   test('should router push to countryView by tracker', () => {
     const { goToCountryByTracker } = useRouteCountry();
     const tracker = {
-      country: 'Bolivia',
+      country: 'bolivia',
+      defaultRate: '1 USD',
+      id: '9a9f07bea8f',
       official: 'Plurinational State of Bolivia',
+      savedDate: 'Feb 8, 2023',
       symbol: 'BOB',
-      id: 'abc123',
     };
 
     goToCountryByTracker(tracker);
 
     expect(mockUseRouter.push).toHaveBeenCalledWith({
       name: 'countryView',
-      params: { country: 'Bolivia' },
+      params: { country: 'bolivia' },
       query: {
-        id: 'abc123',
+        id: '9a9f07bea8f',
         official: 'Plurinational State of Bolivia',
         symbols: 'BOB',
       },

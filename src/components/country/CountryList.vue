@@ -1,6 +1,6 @@
 <template>
   <div v-for="tracker in listTrakers" :key="tracker.id">
-    <CountryCard :country="tracker" @click="goToCountryByTracker(tracker)" />
+    <CountryCard :data-test="'card-' + tracker.id" :country="tracker" @click="goToCountryByTracker(tracker)" />
   </div>
   <p v-if="listTrakers.length === 0" class="text-lg">
     No countries added. To start tracking a dollar to country, search in the
@@ -9,12 +9,13 @@
 </template>
 
 <script setup>
-import useTrakerDollar from "@/composables/useTrakerDollar"
-import useRouteCountry from '@/composables/useRouteCountry';
+import useTrakerDollar from "../../composables/useTrakerDollar"
+import useRouteCountry from '../../composables/useRouteCountry';
 
 import CountryCard from './CountryCard.vue';
 
 const { getTrakers, listTrakers } = useTrakerDollar();
+
 const { goToCountryByTracker } = useRouteCountry()
 
 getTrakers();

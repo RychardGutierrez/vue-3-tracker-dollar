@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoryTracker composable should to match with snapshot 1`] = `
+"<div class=\\"max-w-md w-full py-12 text-dollar-blue\\">
+  <h2 class=\\"mb-4 text-center text-lg\\">7 Day Tracking history 1 USD</h2>
+  <div class=\\"flex py-2 px-12 bg-dollar-secondary text-white rounded-md shadow-md mb-2\\">
+    <p class=\\"flex-1\\">Monday</p>
+    <p>6.828416 BO</p>
+  </div>
+  <div class=\\"flex py-2 px-12 bg-dollar-secondary text-white rounded-md shadow-md mb-2\\">
+    <p class=\\"flex-1\\">Monday</p>
+    <p>6.90908 BO</p>
+  </div>
+  <div class=\\"flex py-2 px-12 bg-dollar-secondary text-white rounded-md shadow-md mb-2\\">
+    <p class=\\"flex-1\\">Monday</p>
+    <p>6.915233 BO</p>
+  </div>
+  <div class=\\"flex py-2 px-12 bg-dollar-secondary text-white rounded-md shadow-md mb-2\\">
+    <p class=\\"flex-1\\">Monday</p>
+    <p>6.914142 BO</p>
+  </div>
+  <div class=\\"flex py-2 px-12 bg-dollar-secondary text-white rounded-md shadow-md mb-2\\">
+    <p class=\\"flex-1\\">Monday</p>
+    <p>6.90469 BO</p>
+  </div>
+  <div class=\\"flex py-2 px-12 bg-dollar-secondary text-white rounded-md shadow-md mb-2\\">
+    <p class=\\"flex-1\\">Monday</p>
+    <p>6.95361 BO</p>
+  </div>
+  <div class=\\"flex py-2 px-12 bg-dollar-secondary text-white rounded-md shadow-md mb-2\\">
+    <p class=\\"flex-1\\">Monday</p>
+    <p>6.95361 BO</p>
+  </div>
+</div>"
+`;

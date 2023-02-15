@@ -127,3 +127,22 @@ export const LIST_RESULT_SEARCH = {
     'Tetã Volívia',
   ],
 };
+
+export const LIST_TRACKER_COUNTRY = [
+  {
+    country: 'bolivia',
+    official: 'Plurinational State of Bolivia',
+    symbol: 'BOB',
+    savedDate: 'Feb 8, 2023',
+    defaultRate: '1 USD',
+    id: '9a9f07bea8f',
+  },
+  {
+    country: 'unitedstatesminoroutlyingislands',
+    official: 'United States Minor Outlying Islands',
+    symbol: 'USD',
+    savedDate: 'Feb 8, 2023',
+    defaultRate: '1 USD',
+    id: '6066f819001',
+  },
+];

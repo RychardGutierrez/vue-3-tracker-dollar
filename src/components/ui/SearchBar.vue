@@ -11,10 +11,9 @@
 
 <script setup>
 
-import useSearchCountry from '@/composables/useSearchCountry';
+import useSearchCountry from '../../composables/useSearchCountry';
 
 const { getResults, searchQuery, searchError, countrySearchResults } = useSearchCountry();
-
 </script>
 
 <style lang="scss" scoped>

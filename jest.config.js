@@ -7,4 +7,5 @@ module.exports = {
   },
   moduleFileExtensions: ['vue', 'js', 'json', 'jsx', 'ts', 'tsx', 'node'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  coverageDirectory: './tests/coverage',
 };

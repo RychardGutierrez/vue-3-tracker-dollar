@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeView should to match with snapshot 1`] = `
+"<main class=\\"container text-black\\">
+  <search-bar-stub></search-bar-stub>
+  <div class=\\"flex flex-col gap-4\\">
+    <suspense-stub></suspense-stub>
+  </div>
+</main>"
+`;

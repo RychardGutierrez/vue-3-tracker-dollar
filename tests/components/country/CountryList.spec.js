@@ -1,4 +1,3 @@
-import { expect } from '@jest/globals';
 import { flushPromises, mount, shallowMount } from '@vue/test-utils';
 import CountryList from '../../../src/components/country/CountryList.vue';
 

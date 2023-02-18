@@ -6,7 +6,8 @@
     "dev": "vite",
     "mock": "vite --mode mock",
     "preview": "vite preview --port 4173",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.2",

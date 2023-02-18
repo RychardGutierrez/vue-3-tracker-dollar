@@ -1,4 +1,3 @@
-import { expect } from '@jest/globals';
 import { mount, shallowMount } from '@vue/test-utils';
 import { nextTick } from 'vue';
 import { getRouter } from 'vue-router-mock';

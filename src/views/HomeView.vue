@@ -20,11 +20,11 @@
 </template>
 
 <script setup>
-import CountryList from '@/components/country/CountryList.vue';
-import SearchBar from '@/components/ui/SearchBar.vue';
-import ListResult from '@/components/ui/ListResult.vue';
+import CountryList from '../components/country/CountryList.vue';
+import SearchBar from '../components/ui/SearchBar.vue';
+import ListResult from '../components/ui/ListResult.vue';
 
-import useRouteCountry from '@/composables/useRouteCountry';
+import useRouteCountry from '../composables/useRouteCountry';
 
 const { goToCountry } = useRouteCountry();
 
